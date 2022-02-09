@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/instantMatchesContainer_CL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/countdownCPV"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cpv_barColor="#7134DC"
+            app:cpv_barWidth="28dp"
+            app:cpv_fillColor="#14000000"
+            app:cpv_innerContourSize="0dp"
+            app:cpv_outerContourSize="0dp"
+            app:cpv_rimColor="@color/white"
+            app:cpv_text=""
+            app:cpv_textSize="0sp"
+            app:cpv_value="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/counterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@id/countdownCPV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/countdownCPV"
+            tools:text="4" />
+
+        <Button
+            android:id="@+id/buttonPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="press"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countdownCPV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

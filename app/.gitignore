@@ -1,0 +1,8 @@
+/build
+/release
+/prod
+/stage
+/prod/debug/output.json
+/prod/debug/output-metadata.json
+/stage/debug/output.json
+/stage/debug/output-metadata.json
