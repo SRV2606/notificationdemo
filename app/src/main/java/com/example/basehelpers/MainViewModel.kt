@@ -29,6 +29,10 @@ class MainViewModel @Inject constructor(
     val insertQuery: LiveData<SampleEntity?>
         get() = _insertQueryLD
 
+    private val _timerValueLD = MutableLiveData<Float>()
+    val timerValueLD: LiveData<Float>
+        get() = _timerValueLD
+
     private fun getSomeQuery() {
         viewModelScope.launch {
             val query = roomRepository.getSomeQuery()
@@ -43,6 +47,12 @@ class MainViewModel @Inject constructor(
                 roomRepository.insertSomeQuery(sampleEntity)
                 getSomeQuery()
             }
+        }
+    }
+
+    fun setTimerValue(remainingPercentage: Float) {
+        viewModelScope.launch {
+            _timerValueLD.postValue(remainingPercentage)
         }
     }
 

@@ -153,4 +153,10 @@ class SharedPreferenceUtil @Inject constructor(
     }
 
     fun getFeedSessionCount() = getInt(FEED_SESSION_COUNT)
+
+    fun getTimerValue(): Float = getFloat("TIMER_VAL")
+    fun setTimerValue(valueTimer: Float) {
+        putFloat("TIMER_VAL", valueTimer)
+    }
+
 }
